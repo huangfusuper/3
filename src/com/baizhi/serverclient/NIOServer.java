@@ -54,7 +54,7 @@ public class NIOServer {
                         }else if(str.matches("^.*吗")){
                             str = str.replace("吗", "！");
                         }else{
-                            str =  "--------无法识别您的请求！请重试!！";
+                            str =  "无法识别您的请求！请重试!！";
                         }
                         ByteBuffer byteBuffer = ByteBuffer.wrap(str.getBytes());
                         s.write(byteBuffer);
