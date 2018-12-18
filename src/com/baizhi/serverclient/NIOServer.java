@@ -25,7 +25,7 @@ public class NIOServer {
         //开始读取和处理客户端响应
         while (true){
             //等待请求到来  否则处于阻塞状态
-            System.out.println("端口9999正在对外提供服务中...................");
+            System.out.println("端口9999正在对外提供服务中....................");
             final SocketChannel s = channel.accept();
             executorService.submit(new Runnable() {
                 @Override
