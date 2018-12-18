@@ -19,7 +19,7 @@ public class BioClient {
         s.connect(new InetSocketAddress("172.16.7.76", 9999));
         //发送请求
         OutputStream os = s.getOutputStream();
-        PrintWriter pw = new PrisdsntWriter(os);
+        PrintWriter pw = new PrintWriter(os);
         pw.println(msg);
         pw.flush();
         //告知服务器结束
