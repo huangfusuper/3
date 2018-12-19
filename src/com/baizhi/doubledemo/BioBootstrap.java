@@ -9,7 +9,10 @@ import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SocketChannel;
 
-public class BIOBootstrap {
+/**
+ * @author 皇甫
+ */
+public class BioBootstrap {
     public static void main(String[] args) throws IOException {
         Object returnValue = send(new MethodInvokeMeta("sum",
                 new Class[]{Integer.class, Integer.class},
