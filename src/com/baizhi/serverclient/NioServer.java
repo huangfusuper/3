@@ -10,7 +10,12 @@ import java.nio.channels.SocketChannel;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class NIOServer {
+import static java.util.concurrent.Executors.*;
+
+/**
+ * @author 皇甫
+ */
+public class NioServer {
     public static void main(String[] args) throws IOException {
         server();
     }
@@ -21,7 +26,7 @@ public class NIOServer {
         //设置服务提供光端口
         channel.bind(new InetSocketAddress("172.16.7.76",9999));
         //创建线程池
-        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        ExecutorService executorService = newFixedThreadPool(10);
         //开始读取和处理客户端响应
         while (true){
             //等待请求到来  否则处于阻塞状态

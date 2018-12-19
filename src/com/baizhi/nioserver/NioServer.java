@@ -10,7 +10,10 @@ import java.nio.channels.*;
 import java.util.Date;
 import java.util.Iterator;
 
-public class NIOServer {
+/**
+ * @author 皇甫
+ */
+public class NioServer {
     public static void main(String[] args) throws IOException {
         //创建监听新进来的TCP连接的通道的对象
         ServerSocketChannel ssc = ServerSocketChannel.open();
